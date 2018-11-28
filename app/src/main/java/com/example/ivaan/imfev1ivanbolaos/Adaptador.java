@@ -7,7 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
-import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -32,9 +34,9 @@ public class Adaptador extends ArrayAdapter<Tarea> {
             Tarea elemTareas = listaTarea.get(position);
 
             //Rescatar los elementos de la UI de la template
-            EditText tarea = (EditText) v.findViewById(R.id.tarea);
-            CheckBox prioridad = (CheckBox) v.findViewById(R.id.prioridad);
-            CheckBox trabajo = (CheckBox) v.findViewById(R.id.trabajo);
+            TextView tarea = (TextView) v.findViewById(R.id.texttarea);
+            CheckBox prioridad = (CheckBox) v.findViewById(R.id.checkPrioridad);
+            CheckBox trabajo = (CheckBox) v.findViewById(R.id.checkTarea);
 
             //Hacer un set de la info del elemento en los elementos de la UI
             tarea.setText(elemTareas.getTarea());

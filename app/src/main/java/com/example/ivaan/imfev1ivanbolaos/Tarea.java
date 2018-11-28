@@ -1,8 +1,9 @@
 package com.example.ivaan.imfev1ivanbolaos;
 
+
 import java.io.Serializable;
 
-public class Tarea implements Serializable {
+public class Tarea   implements Serializable {
     private String tarea;
     private Boolean prioridad;
     private Boolean trabajo;

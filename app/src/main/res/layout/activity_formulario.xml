@@ -4,43 +4,150 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".formulario">
 
-    <EditText
-        android:id="@+id/tarea"
-        android:layout_width="159dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="125dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:hint="Tarea"
-        android:inputType="textPersonName" />
+        android:layout_marginBottom="20dp">
 
-    <CheckBox
-        android:id="@+id/prioridad"
-        android:layout_width="104dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:text="Prioritario" />
+        <EditText
+            android:id="@+id/tarea1"
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Tarea"
+            android:inputType="textPersonName" />
 
-    <CheckBox
-        android:id="@+id/trabajo"
-        android:layout_width="106dp"
+        <CheckBox
+            android:id="@+id/prioridad1"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:text="Prioritario" />
+
+        <CheckBox
+            android:id="@+id/trabajo1"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:text="Tarea" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:text="Tarea" />
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:id="@+id/tarea2"
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Tarea"
+            android:inputType="textPersonName" />
+
+        <CheckBox
+            android:id="@+id/prioridad2"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:text="Prioritario" />
+
+        <CheckBox
+            android:id="@+id/trabajo2"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Tarea" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:id="@+id/tarea3"
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Tarea"
+            android:inputType="textPersonName" />
+
+        <CheckBox
+            android:id="@+id/prioridad3"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:text="Prioritario" />
+
+        <CheckBox
+            android:id="@+id/trabajo3"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:text="Tarea" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:id="@+id/tarea4"
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Tarea"
+            android:inputType="textPersonName" />
+
+        <CheckBox
+            android:id="@+id/prioridad4"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:text="Prioritario" />
+
+        <CheckBox
+            android:id="@+id/trabajo4"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:text="Tarea" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <EditText
+            android:id="@+id/tarea5"
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Tarea"
+            android:inputType="textPersonName" />
+
+        <CheckBox
+            android:id="@+id/prioridad5"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:text="Prioritario" />
+
+        <CheckBox
+            android:id="@+id/trabajo5"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:text="Tarea" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/enviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
         android:onClick="enviar"
         android:text="Añadir" />
 

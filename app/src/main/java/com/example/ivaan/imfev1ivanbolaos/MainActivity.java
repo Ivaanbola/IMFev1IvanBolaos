@@ -22,12 +22,9 @@ public class MainActivity extends AppCompatActivity {
         tareas = (ListView) findViewById(R.id.tareas);
         listatareas = new ArrayList<Tarea>();
 
-        if (getIntent().getStringExtra("tarea") != null) {
-            String tarea = (String) getIntent().getSerializableExtra("tarea");
-            Boolean prioridad = (Boolean) getIntent().getSerializableExtra("prioridad");
-            Boolean trabajo = (Boolean) getIntent().getSerializableExtra("trabajo");
-            Tarea tareanueva = new Tarea(tarea, prioridad, trabajo);
-            listatareas.add(tareanueva);
+        if (getIntent().getStringExtra("array") != null) {
+
+            listatareas = (ArrayList<Tarea>) getIntent().getSerializableExtra("array");
 
             Adaptador adaptador = new Adaptador(this,
                     R.layout.activity_tareas_item,

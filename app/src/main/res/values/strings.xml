@@ -5,6 +5,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="direccion">Dirección: Calle Bernardino Obregón, 25, 28012 Madrid</string>
     <string name="title_activity_formulario">formulario</string>
-    <string name="inser">Lleva al layout del formulario</string>
+    <string name="inser">Boton de insertar: Lleva al layout del formulario</string>
     <string name="instrucc">Instrucciones de uso</string>
+    <string name="instrucc2">Boton de ayuda: Devuelve a esta pagina</string>
 </resources>
