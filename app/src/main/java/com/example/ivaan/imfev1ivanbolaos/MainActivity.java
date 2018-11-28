@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private List<Tarea> listatareas;
+    private ArrayList<Tarea> listatareas;
     private ListView tareas;
 
     @Override
@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         listatareas = new ArrayList<Tarea>();
 
         if (getIntent().getStringExtra("tarea") != null) {
-            String tarea = getIntent().getStringExtra("tarea");
-            Boolean prioridad = getIntent().getBooleanExtra("prioridad", false);
-            Boolean trabajo = getIntent().getBooleanExtra("trabajo", false);
+            String tarea = (String) getIntent().getSerializableExtra("tarea");
+            Boolean prioridad = (Boolean) getIntent().getSerializableExtra("prioridad");
+            Boolean trabajo = (Boolean) getIntent().getSerializableExtra("trabajo");
             Tarea tareanueva = new Tarea(tarea, prioridad, trabajo);
             listatareas.add(tareanueva);
 
@@ -35,9 +35,6 @@ public class MainActivity extends AppCompatActivity {
             );
             tareas.setAdapter(adaptador);
         }
-
-
-
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

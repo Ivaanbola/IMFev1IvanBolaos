@@ -4,21 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_weight="2"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".contenido">
 
 
     <fragment
-        android:id="@+id/fragment"
+        android:id="@+id/fragmentarriba"
         android:name="com.example.ivaan.imfev1ivanbolaos.arriba"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1" />
 
     <fragment
-        android:id="@+id/fragment2"
+        android:id="@+id/fragmentabajo"
         android:name="com.example.ivaan.imfev1ivanbolaos.abajo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1" />
+
 </LinearLayout>
