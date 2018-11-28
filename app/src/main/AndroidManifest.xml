@@ -19,7 +19,8 @@
         <activity android:name=".formulario" />
         <activity android:name=".contenido" />
         <activity android:name=".lista" />
-        <activity android:name=".tareas_item"></activity>
+        <activity android:name=".tareas_item" />
+
     </application>
 
 </manifest>

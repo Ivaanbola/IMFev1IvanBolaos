@@ -41,6 +41,7 @@ public class Adaptador extends ArrayAdapter<Tarea> {
 
             //Hacer un set de la info del elemento en los elementos de la UI
             tarea.setText(elemTareas.getTarea());
+            
             trabajo.setChecked(elemTareas.getTrabajo());
             prioridad.setChecked(elemTareas.getPrioridad());
 

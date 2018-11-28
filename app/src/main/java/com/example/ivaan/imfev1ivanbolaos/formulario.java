@@ -20,49 +20,55 @@ public class formulario extends AppCompatActivity {
     }
 
     public void enviar(View view) {
+        ArrayList<Tarea> array = new ArrayList<>();
 
 
-        EditText tarea = (EditText) findViewById(R.id.tarea1);
-        String tareatext = tarea.getText().toString();
-        CheckBox prioridad = (CheckBox) findViewById(R.id.prioridad1);
-        Boolean prioridadtext = prioridad.isChecked();
         CheckBox trabajo = (CheckBox) findViewById(R.id.trabajo1);
         Boolean trabajotext = trabajo.isChecked();
+        CheckBox prioridad = (CheckBox) findViewById(R.id.prioridad1);
+        Boolean prioridadtext = prioridad.isChecked();
+        EditText tarea = (EditText) findViewById(R.id.tarea1);
+        String tareatext = tarea.getText().toString();
         Tarea tareaobj = new Tarea(tareatext, prioridadtext, trabajotext);
-        ArrayList<Tarea> array = new ArrayList<>();
         array.add(tareaobj);
-        trabajo = (CheckBox) findViewById(R.id.trabajo2);
-        trabajotext = trabajo.isChecked();
-        prioridad = (CheckBox) findViewById(R.id.prioridad2);
-        prioridadtext = prioridad.isChecked();
-        tarea = (EditText) findViewById(R.id.tarea2);
-        tareatext = tarea.getText().toString();
-        tareaobj = new Tarea(tareatext, prioridadtext, trabajotext);
-        array.add(tareaobj);
-        trabajo = (CheckBox) findViewById(R.id.trabajo3);
-        trabajotext = trabajo.isChecked();
-        prioridad = (CheckBox) findViewById(R.id.prioridad3);
-        prioridadtext = prioridad.isChecked();
-        tarea = (EditText) findViewById(R.id.tarea3);
-        tareatext = tarea.getText().toString();
-        tareaobj = new Tarea(tareatext, prioridadtext, trabajotext);
-        array.add(tareaobj);
-        trabajo = (CheckBox) findViewById(R.id.trabajo4);
-        trabajotext = trabajo.isChecked();
-        prioridad = (CheckBox) findViewById(R.id.prioridad4);
-        prioridadtext = prioridad.isChecked();
-        tarea = (EditText) findViewById(R.id.tarea4);
-        tareatext = tarea.getText().toString();
-        tareaobj = new Tarea(tareatext, prioridadtext, trabajotext);
-        array.add(tareaobj);
-        trabajo = (CheckBox) findViewById(R.id.trabajo5);
-        trabajotext = trabajo.isChecked();
-        prioridad = (CheckBox) findViewById(R.id.prioridad5);
-        prioridadtext = prioridad.isChecked();
-        tarea = (EditText) findViewById(R.id.tarea5);
-        tareatext = tarea.getText().toString();
-        tareaobj = new Tarea(tareatext, prioridadtext, trabajotext);
-        array.add(tareaobj);
+
+
+        CheckBox trabajo1 = (CheckBox) findViewById(R.id.trabajo2);
+        Boolean trabajotext1 = trabajo1.isChecked();
+        CheckBox prioridad1 = (CheckBox) findViewById(R.id.prioridad2);
+        Boolean prioridadtext1 = prioridad1.isChecked();
+        EditText tarea1 = (EditText) findViewById(R.id.tarea2);
+        String tareatext1 = tarea1.getText().toString();
+        Tarea tareaobj1 = new Tarea(tareatext1, prioridadtext1, trabajotext1);
+        array.add(tareaobj1);
+
+        CheckBox trabajo2 = (CheckBox) findViewById(R.id.trabajo3);
+        Boolean trabajotext2 = trabajo2.isChecked();
+        CheckBox prioridad2 = (CheckBox) findViewById(R.id.prioridad3);
+        Boolean prioridadtext2 = prioridad2.isChecked();
+        EditText tarea2 = (EditText) findViewById(R.id.tarea3);
+        String tareatext2 = tarea2.getText().toString();
+        Tarea tareaobj2 = new Tarea(tareatext2, prioridadtext2, trabajotext2);
+        array.add(tareaobj2);
+
+        CheckBox trabajo3 = (CheckBox) findViewById(R.id.trabajo4);
+        Boolean trabajotext3 = trabajo3.isChecked();
+        CheckBox prioridad3 = (CheckBox) findViewById(R.id.prioridad4);
+        Boolean prioridadtext3 = prioridad3.isChecked();
+        EditText tarea3 = (EditText) findViewById(R.id.tarea4);
+        String tareatext3 = tarea3.getText().toString();
+        Tarea tareaobj3 = new Tarea(tareatext3, prioridadtext3, trabajotext3);
+        array.add(tareaobj3);
+
+        CheckBox trabajo4 = (CheckBox) findViewById(R.id.trabajo5);
+        Boolean trabajotext4 = trabajo4.isChecked();
+        CheckBox prioridad4 = (CheckBox) findViewById(R.id.prioridad5);
+        Boolean prioridadtext4 = prioridad4.isChecked();
+        EditText tarea4 = (EditText) findViewById(R.id.tarea5);
+        String tareatext4 = tarea4.getText().toString();
+        Tarea tareaobj4 = new Tarea(tareatext4, prioridadtext4, trabajotext4);
+        array.add(tareaobj4);
+
 
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         intent.putExtra("array", array);
