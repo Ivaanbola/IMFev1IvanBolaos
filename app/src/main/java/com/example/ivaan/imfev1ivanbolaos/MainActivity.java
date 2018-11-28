@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -19,14 +20,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tareas = (ListView) findViewById(R.id.tareas);
-        listatareas = new ArrayList<Tarea>();
 
-        if (getIntent().getStringExtra("array") != null) {
 
-            listatareas = (ArrayList<Tarea>) getIntent().getSerializableExtra("array");
+        if (getIntent().getSerializableExtra("array") != null) {
+            tareas = (ListView) findViewById(R.id.tareas);
+            ArrayList<Tarea> array =  (ArrayList<Tarea>) getIntent().getSerializableExtra("array");
 
-            Adaptador adaptador = new Adaptador(this,
+            listatareas = new ArrayList<Tarea>();
+            listatareas = array;
+
+            Adaptador adaptador= new Adaptador(this,
                     R.layout.activity_tareas_item,
                     listatareas
             );
