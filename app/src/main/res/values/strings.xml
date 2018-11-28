@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">IMFev1IvanBolaños</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="direccion">Dirección: Calle Bernardino Obregón, 25, 28012 Madrid</string>
+    <string name="title_activity_formulario">formulario</string>
+    <string name="inser">Boton insertar: Lleva al layout del formulario</string>
+    <string name="instrucc">Instrucciones de uso</string>
+</resources>

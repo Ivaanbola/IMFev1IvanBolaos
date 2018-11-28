@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/insertar"
+        android:enabled="true"
+        android:icon="@drawable/ic_add_black_24dp"
+        android:title="insertar"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/ayuda"
+        android:checkable="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_help_outline_black_24dp"
+        android:title="ayuda"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/borrar"
+        android:enabled="true"
+        android:icon="@drawable/ic_remove_black_24dp"
+        android:title="Borrar"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+</menu>
