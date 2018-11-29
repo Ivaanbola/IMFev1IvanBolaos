@@ -44,12 +44,22 @@ public class Adaptador extends ArrayAdapter<Tarea> {
         //Hacer un set de la info del elemento en los elementos de la UI
         tarea.setText(elemTareas.getTarea());
         if (elemTareas.isPrioridad()) {
-            prioridad.setImageResource(R.drawable.noprioridad);
-        } else prioridad.setImageResource(R.drawable.pprioridad);
+            prioridad.setImageResource(R.drawable.prioridad);
+        } else prioridad.setImageResource(R.drawable.noprioridad);
         if (elemTareas.isTrabajo()) {
             trabajo.setImageResource(R.drawable.trabajo);
         } else trabajo.setImageResource(R.drawable.notrabajo);
+
+        final ImageView imagen = (ImageView) v.findViewById(R.id.terminada);
+        imagen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imagen.setImageResource(R.drawable.hecha);
+            }
+        });
+
         return v;
     }
+
 
 }

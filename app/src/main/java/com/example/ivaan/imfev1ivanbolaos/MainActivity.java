@@ -6,11 +6,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private ArrayList<Tarea> listatareas;
@@ -22,19 +22,28 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        if (getIntent().getSerializableExtra("array") != null) {
+        if (getIntent().getSerializableExtra("array") == null) {
+
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.contenidomain, new vacio())
+                    .commit();
+        } else {
+
+
             tareas = (ListView) findViewById(R.id.tareas);
-            ArrayList<Tarea> array =  (ArrayList<Tarea>) getIntent().getSerializableExtra("array");
+            ArrayList<Tarea> array = (ArrayList<Tarea>) getIntent().getSerializableExtra("array");
 
             listatareas = new ArrayList<Tarea>();
             listatareas = array;
 
-            Adaptador adaptador= new Adaptador(this,
+            Adaptador adaptador = new Adaptador(this,
                     R.layout.activity_tareas_item,
                     listatareas
             );
             tareas.setAdapter(adaptador);
         }
+
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -70,4 +79,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void terminada(View view) {
+
+
+
+    }
 }
