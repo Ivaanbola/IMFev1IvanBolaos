@@ -5,8 +5,8 @@ import java.io.Serializable;
 
 public class Tarea   implements Serializable {
     private String tarea;
-    private Boolean prioridad;
-    private Boolean trabajo;
+    private boolean prioridad;
+    private boolean trabajo;
 
 
     public Tarea(){
@@ -27,19 +27,19 @@ public class Tarea   implements Serializable {
         this.tarea = tarea;
     }
 
-    public Boolean getPrioridad() {
+    public boolean isPrioridad() {
         return prioridad;
     }
 
-    public void setPrioridad(Boolean prioridad) {
+    public void setPrioridad(boolean prioridad) {
         this.prioridad = prioridad;
     }
 
-    public Boolean getTrabajo() {
+    public boolean isTrabajo() {
         return trabajo;
     }
 
-    public void setTrabajo(Boolean trabajo) {
+    public void setTrabajo(boolean trabajo) {
         this.trabajo = trabajo;
     }
 }

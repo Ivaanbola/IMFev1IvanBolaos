@@ -1,6 +1,7 @@
 package com.example.ivaan.imfev1ivanbolaos;
 
 import android.content.Context;
+import android.media.Image;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -31,20 +33,22 @@ public class Adaptador extends ArrayAdapter<Tarea> {
     public View getView(int position, @NonNull View convView, @NonNull ViewGroup parent) {
         View v = LayoutInflater.from(ctx).inflate(layaoutTemplate, parent, false);
 
-            //Obtener la informacion del elemento de la lista que estoy iterando en el momento
-            Tarea elemTareas = listaTarea.get(position);
+        //Obtener la informacion del elemento de la lista que estoy iterando en el momento
+        Tarea elemTareas = listaTarea.get(position);
 
-            //Rescatar los elementos de la UI de la template
-            TextView tarea = (TextView) v.findViewById(R.id.texttarea);
-            CheckBox prioridad = (CheckBox) v.findViewById(R.id.checkPrioridad);
-            CheckBox trabajo = (CheckBox) v.findViewById(R.id.checkTarea);
+        //Rescatar los elementos de la UI de la template
+        TextView tarea = (TextView) v.findViewById(R.id.texttarea);
+        ImageView prioridad = (ImageView) v.findViewById(R.id.checkPrioridad);
+        ImageView trabajo = (ImageView) v.findViewById(R.id.checkTarea);
 
-            //Hacer un set de la info del elemento en los elementos de la UI
-            tarea.setText(elemTareas.getTarea());
-            
-            trabajo.setChecked(elemTareas.getTrabajo());
-            prioridad.setChecked(elemTareas.getPrioridad());
-
+        //Hacer un set de la info del elemento en los elementos de la UI
+        tarea.setText(elemTareas.getTarea());
+        if (elemTareas.isPrioridad()) {
+            prioridad.setImageResource(R.drawable.noprioridad);
+        } else prioridad.setImageResource(R.drawable.pprioridad);
+        if (elemTareas.isTrabajo()) {
+            trabajo.setImageResource(R.drawable.trabajo);
+        } else trabajo.setImageResource(R.drawable.notrabajo);
         return v;
     }
 

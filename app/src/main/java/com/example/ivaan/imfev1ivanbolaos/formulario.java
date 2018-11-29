@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -29,8 +30,10 @@ public class formulario extends AppCompatActivity {
         Boolean prioridadtext = prioridad.isChecked();
         EditText tarea = (EditText) findViewById(R.id.tarea1);
         String tareatext = tarea.getText().toString();
-        Tarea tareaobj = new Tarea(tareatext, prioridadtext, trabajotext);
-        array.add(tareaobj);
+        if (!tareatext.isEmpty()) {
+            Tarea tareaobj = new Tarea(tareatext, prioridadtext, trabajotext);
+            array.add(tareaobj);
+        }
 
 
         CheckBox trabajo1 = (CheckBox) findViewById(R.id.trabajo2);
@@ -39,8 +42,10 @@ public class formulario extends AppCompatActivity {
         Boolean prioridadtext1 = prioridad1.isChecked();
         EditText tarea1 = (EditText) findViewById(R.id.tarea2);
         String tareatext1 = tarea1.getText().toString();
-        Tarea tareaobj1 = new Tarea(tareatext1, prioridadtext1, trabajotext1);
-        array.add(tareaobj1);
+        if (!tareatext1.isEmpty()) {
+            Tarea tareaobj1 = new Tarea(tareatext1, prioridadtext1, trabajotext1);
+            array.add(tareaobj1);
+        }
 
         CheckBox trabajo2 = (CheckBox) findViewById(R.id.trabajo3);
         Boolean trabajotext2 = trabajo2.isChecked();
@@ -48,8 +53,10 @@ public class formulario extends AppCompatActivity {
         Boolean prioridadtext2 = prioridad2.isChecked();
         EditText tarea2 = (EditText) findViewById(R.id.tarea3);
         String tareatext2 = tarea2.getText().toString();
-        Tarea tareaobj2 = new Tarea(tareatext2, prioridadtext2, trabajotext2);
-        array.add(tareaobj2);
+        if (!tareatext2.isEmpty()) {
+            Tarea tareaobj2 = new Tarea(tareatext2, prioridadtext2, trabajotext2);
+            array.add(tareaobj2);
+        }
 
         CheckBox trabajo3 = (CheckBox) findViewById(R.id.trabajo4);
         Boolean trabajotext3 = trabajo3.isChecked();
@@ -57,8 +64,10 @@ public class formulario extends AppCompatActivity {
         Boolean prioridadtext3 = prioridad3.isChecked();
         EditText tarea3 = (EditText) findViewById(R.id.tarea4);
         String tareatext3 = tarea3.getText().toString();
-        Tarea tareaobj3 = new Tarea(tareatext3, prioridadtext3, trabajotext3);
-        array.add(tareaobj3);
+        if (!tareatext3.isEmpty()) {
+            Tarea tareaobj3 = new Tarea(tareatext3, prioridadtext3, trabajotext3);
+            array.add(tareaobj3);
+        }
 
         CheckBox trabajo4 = (CheckBox) findViewById(R.id.trabajo5);
         Boolean trabajotext4 = trabajo4.isChecked();
@@ -66,14 +75,16 @@ public class formulario extends AppCompatActivity {
         Boolean prioridadtext4 = prioridad4.isChecked();
         EditText tarea4 = (EditText) findViewById(R.id.tarea5);
         String tareatext4 = tarea4.getText().toString();
-        Tarea tareaobj4 = new Tarea(tareatext4, prioridadtext4, trabajotext4);
-        array.add(tareaobj4);
-
-
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        intent.putExtra("array", array);
-
-        startActivity(intent);
+        if (!tareatext4.isEmpty()) {
+            Tarea tareaobj4 = new Tarea(tareatext4, prioridadtext4, trabajotext4);
+            array.add(tareaobj4);
+        }
+        if (!array.isEmpty()) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            intent.putExtra("array", array);
+            startActivity(intent);
+        } else
+            Toast.makeText(this, "Tienes que rellenar al menos una tarea", Toast.LENGTH_SHORT).show();
 
 
     }
